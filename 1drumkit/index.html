@@ -68,7 +68,9 @@ function removeTransition(e) {
 }
 
 const keys = document.querySelectorAll(".key")
+// console.log(keys)
 keys.forEach(key => {
+  console.log(key)
   key.addEventListener('transitionend', removeTransition)
 })
 
@@ -80,7 +82,7 @@ function playsound(e) {
     if (!audio) return
     audio.currentTime = 0
     audio.play()
-    console.log(key)
+    // console.log(key)
     key.classList.add('playing')
 }
 </script>
