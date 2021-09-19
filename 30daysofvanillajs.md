@@ -14,6 +14,12 @@
       - [String.prototype.split()](#stringprototypesplit)
       - [Destructuring Assignments](#destructuring-assignments)
       - [Array.prototype.reduce()](#arrayprototypereduce)
+    - [5 Flex Panels](#5-flex-panels)
+      - [CSS Cheat Sheet](#css-cheat-sheet)
+      - [HTML DOM querySelector() method](#html-dom-queryselector-method)
+      - [HTML DOM addEventListener()](#html-dom-addeventlistener)
+      - [Event references](#event-references)
+      - [Toggle](#toggle)
 ### [4. Array Cardio](4arraycardio/index-Start.html)
 **learning targets**
 
@@ -100,3 +106,27 @@ console.log(array1.reduce(reducer, 5));
     return pv
     }, {})
 ```
+
+### [5 Flex Panels](5flexpanels/index-START.html)
+**Learning Targets**
+#### [CSS Cheat Sheet](https://www.sketchingwithcss.com/samplechapter/cheatsheet.html?utm_source=CSS-Weekly&utm_campaign=Issue-86&utm_medium=email)
+-***Using CSS to modify styles***
+***Selecting all first children if an element***
+```CSS
+.class > *:first-child
+```
+
+#### [HTML DOM querySelector() method](https://www.w3schools.com/jsref/met_document_queryselector.asp#:~:text=HTML%20DOM%20querySelector%20%28%29%20Method%201%20Definition%20and,5%20Technical%20Details.%20...%206%20More%20Examples.%20)
+
+-***using the query selector all will return items int o a node list which has different properties***
+-***one can call .forEach() on the nodelist***
+
+#### [HTML DOM addEventListener()](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)
+-***listens for an event, first argument, and runs function, second argument***
+-***can be used in conjunction with .forEach to apply an event listener to all elements with that class***
+
+#### [Event references](https://developer.mozilla.org/en-US/docs/Web/Events)
+-***the list of events that can be passed into eventlistener***
+
+#### [Toggle](https://www.w3schools.com/howto/howto_js_toggle_class.asp)
+-***turning on and off class list on an eventlistner***
