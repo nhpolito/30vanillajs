@@ -20,6 +20,11 @@
       - [HTML DOM addEventListener()](#html-dom-addeventlistener)
       - [Event references](#event-references)
       - [Toggle](#toggle)
+    - [6.typeahead](#6typeahead)
+      - [fetch()](#fetch)
+        - [RegExp.prototype.test()](#regexpprototypetest)
+        - [string.prototype.match](#stringprototypematch)
+        - [Element.inner.HTML](#elementinnerhtml)
 ### [4. Array Cardio](4arraycardio/index.html)
 **learning targets**
 
@@ -130,3 +135,21 @@ console.log(array1.reduce(reducer, 5));
 
 #### [Toggle](https://www.w3schools.com/howto/howto_js_toggle_class.asp)
 -***turning on and off class list on an eventlistner***
+
+### [6.typeahead](6typeahead/index-START.html)
+**Learning Targets**
+
+#### [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/fetch)
+
+-***Fetch does not know what data comes after fetched***
+```JavaScript
+fetch(endpoint).then(blob => console.log(blob))
+```
+-***A fetch response is a promise (blob), because JS doesn't know what data is in this ressponse, blob can have json called on it ,blob.json() to return another promise, which we can call .then() on again to return the data***
+-***includes is specific***
+##### [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+-***The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.***
+##### [string.prototype.match](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
+-***The match() method retrieves the result of matching a string against a regular expression.***
+##### [Element.inner.HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+-***The Element property innerHTML gets or sets the HTML or XML markup contained within the element.***

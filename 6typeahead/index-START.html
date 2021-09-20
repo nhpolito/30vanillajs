@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Type Ahead 👀</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="search-form">
+      <input type="text" class="search" placeholder="City or State" />
+      <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+    <script>
+      const endpoint =
+        "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
+      const cities = [];
 
-  <form class="search-form">
-    <input type="text" class="search" placeholder="City or State">
-    <ul class="suggestions">
-      <li>Filter for a city</li>
-      <li>or a state</li>
-    </ul>
-  </form>
-<script>
-const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+      fetch(endpoint)
+        .then((blob) => blob.json())
+        .then((data) => cities.push(...data));
 
-</script>
-</body>
+      // a function I tried to implement early, but includes was too specific
+      // function findMatches(wordToMatch, cities) {
+      //   return cities.filter((obj) => {
+      //   console.log(Object.values(obj).includes(wordToMatch))
+      //   return Object.values(obj).includes(wordToMatch)
+      //   });
+      // }
+
+      function findMatches(wordToMatch, cities) {
+        return cities.filter((object) => {
+          let regex = new RegExp(wordToMatch, "gi");
+          return object.city.match(regex) || object.state.match(regex);
+        });
+      }
+
+      function displayMatches() {
+        // matches is an array that is filtered by the findmatches function -> "this" points to searchInput
+        let matches = findMatches(this.value, cities);
+        // html is the matches array mapped so that each returned item is a <li> that includes
+        let html = matches
+          .map((matchedplaces) => {
+            // creating a highlighter
+            // we do this by creating a RegEx that searches for the input value, global and case insensitive
+            const regex = new RegExp(this.value, "gi");
+            // we now replace the section of matchedplaces.city that was the input value, we repalce it
+            // with the same letters but contained in a span with a class of "hl"
+            const cityName = matchedplaces.city.replace(
+              regex,
+              `<span class="hl">${this.value}</span>`
+            );
+            const cityState = matchedplaces.state.replace(
+              regex,
+              `<span class="hl">${this.value}</span>`
+            );
+            // const stateName = matchedplaces.state.replace(regex, `<span class="hl"> ${this.value} </span>`)
+            // this old span was only of the text matchedplaces.city and state, we are
+            // creating a new one that replaces the regex of our input value with
+            // that regex surrounded in a span with a class that highlights the letters
+            // <span class="name"> ${matchedplaces.city}, ${matchedplaces.state} </span>
+            return `
+        <li>
+        <span class="name"> ${cityName}, ${cityState} </span>
+        <span class="population">Population = ${matchedplaces.population} </span>
+        </li>
+        `;
+          })
+          .join("");
+        // selects the suggest variable (element of class .suggestions)
+        suggest.innerHTML = html;
+      }
+
+      console.log(findMatches("Bel", cities));
+
+      const searchInput = document.querySelector(".search");
+      const suggest = document.querySelector(".suggestions");
+      // everytime someone changes the "searchInput we run displaymatches"
+      searchInput.addEventListener("change", displayMatches);
+      searchInput.addEventListener("keyup", displayMatches);
+    </script>
+  </body>
 </html>
