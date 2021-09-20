@@ -20,7 +20,7 @@
       - [HTML DOM addEventListener()](#html-dom-addeventlistener)
       - [Event references](#event-references)
       - [Toggle](#toggle)
-### [4. Array Cardio](4arraycardio/index-Start.html)
+### [4. Array Cardio](4arraycardio/index.html)
 **learning targets**
 
 -***use [] to access array objects***
