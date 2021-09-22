@@ -22,9 +22,23 @@
       - [Toggle](#toggle)
     - [6.typeahead](#6typeahead)
       - [fetch()](#fetch)
-        - [RegExp.prototype.test()](#regexpprototypetest)
-        - [string.prototype.match](#stringprototypematch)
-        - [Element.inner.HTML](#elementinnerhtml)
+      - [RegExp.prototype.test()](#regexpprototypetest)
+      - [string.prototype.match](#stringprototypematch)
+      - [Element.inner.HTML](#elementinnerhtml)
+    - [Array cardio 2](#array-cardio-2)
+      - [Array.prototype.every](#arrayprototypeevery)
+      - [Array.prototype.some](#arrayprototypesome)
+      - [Array.prototype.findIndex()](#arrayprototypefindindex)
+      - [Array.prototype.slice()](#arrayprototypeslice)
+    - [Html5canvas](#html5canvas)
+      - [HTMLCanvasElement.getContext()](#htmlcanvaselementgetcontext)
+      - [CanvasRenderingContext.2D.strokeStyle](#canvasrenderingcontext2dstrokestyle)
+      - [CanvasRenderingContext.2D.lineJoin](#canvasrenderingcontext2dlinejoin)
+      - [CanvasRenderingContext.2D.lineCap](#canvasrenderingcontext2dlinecap)
+      - [CanvasRenderingContext2D.beginPath()](#canvasrenderingcontext2dbeginpath)
+      - [CanvasRenderingContext2D.moveTo()](#canvasrenderingcontext2dmoveto)
+      - [CanvasRenderingContext2D.lineTo()](#canvasrenderingcontext2dlineto)
+      - [CanvasRenderingContext2D.stroke()](#canvasrenderingcontext2dstroke)
 ### [4. Array Cardio](4arraycardio/index.html)
 **learning targets**
 
@@ -147,9 +161,27 @@ fetch(endpoint).then(blob => console.log(blob))
 ```
 -***A fetch response is a promise (blob), because JS doesn't know what data is in this ressponse, blob can have json called on it ,blob.json() to return another promise, which we can call .then() on again to return the data***
 -***includes is specific***
-##### [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+#### [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 -***The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.***
-##### [string.prototype.match](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
+#### [string.prototype.match](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 -***The match() method retrieves the result of matching a string against a regular expression.***
-##### [Element.inner.HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+#### [Element.inner.HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 -***The Element property innerHTML gets or sets the HTML or XML markup contained within the element.***
+
+### [Array cardio 2](7arraycardio2/index-START.html) 
+#### [Array.prototype.every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+#### [Array.prototype.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+#### [Array.prototype.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+#### [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+### [Html5canvas](8html5canvas/index-START.html)
+#### [HTMLCanvasElement.getContext()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext)
+-***The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.***
+-***Later calls to this method on the same canvas element, with the same contextType argument, will always return the same drawing context instance as was returned the first time the method was invoked. It is not possible to get a different drawing context object on a given canvas element.***
+#### [CanvasRenderingContext.2D.strokeStyle](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle)
+#### [CanvasRenderingContext.2D.lineJoin](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+#### [CanvasRenderingContext.2D.lineCap](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap)
+#### [CanvasRenderingContext2D.beginPath()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath)
+#### [CanvasRenderingContext2D.moveTo()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo)
+#### [CanvasRenderingContext2D.lineTo()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo)
+#### [CanvasRenderingContext2D.stroke()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke)
