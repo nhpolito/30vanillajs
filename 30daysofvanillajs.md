@@ -25,12 +25,12 @@
       - [RegExp.prototype.test()](#regexpprototypetest)
       - [string.prototype.match](#stringprototypematch)
       - [Element.inner.HTML](#elementinnerhtml)
-    - [Array cardio 2](#array-cardio-2)
+    - [7. Array cardio 2](#7-array-cardio-2)
       - [Array.prototype.every](#arrayprototypeevery)
       - [Array.prototype.some](#arrayprototypesome)
       - [Array.prototype.findIndex()](#arrayprototypefindindex)
       - [Array.prototype.slice()](#arrayprototypeslice)
-    - [Html5canvas](#html5canvas)
+    - [8. Html5canvas](#8-html5canvas)
       - [HTMLCanvasElement.getContext()](#htmlcanvaselementgetcontext)
       - [CanvasRenderingContext.2D.strokeStyle](#canvasrenderingcontext2dstrokestyle)
       - [CanvasRenderingContext.2D.lineJoin](#canvasrenderingcontext2dlinejoin)
@@ -39,6 +39,8 @@
       - [CanvasRenderingContext2D.moveTo()](#canvasrenderingcontext2dmoveto)
       - [CanvasRenderingContext2D.lineTo()](#canvasrenderingcontext2dlineto)
       - [CanvasRenderingContext2D.stroke()](#canvasrenderingcontext2dstroke)
+    - [10. checkbox challenge](#10-checkbox-challenge)
+      - [shiftKey](#shiftkey)
 ### [4. Array Cardio](4arraycardio/index.html)
 **learning targets**
 
@@ -168,13 +170,13 @@ fetch(endpoint).then(blob => console.log(blob))
 #### [Element.inner.HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 -***The Element property innerHTML gets or sets the HTML or XML markup contained within the element.***
 
-### [Array cardio 2](7arraycardio2/index-START.html) 
+### [7. Array cardio 2](7arraycardio2/index-START.html) 
 #### [Array.prototype.every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 #### [Array.prototype.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 #### [Array.prototype.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 #### [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
-### [Html5canvas](8html5canvas/index-START.html)
+### [8. Html5canvas](8html5canvas/index-START.html)
 #### [HTMLCanvasElement.getContext()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext)
 -***The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.***
 -***Later calls to this method on the same canvas element, with the same contextType argument, will always return the same drawing context instance as was returned the first time the method was invoked. It is not possible to get a different drawing context object on a given canvas element.***
@@ -185,3 +187,7 @@ fetch(endpoint).then(blob => console.log(blob))
 #### [CanvasRenderingContext2D.moveTo()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo)
 #### [CanvasRenderingContext2D.lineTo()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo)
 #### [CanvasRenderingContext2D.stroke()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke)
+
+### [10. checkbox challenge](10checkboxchallenge/index-START.html)
+
+#### [shiftKey](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/shiftKey)

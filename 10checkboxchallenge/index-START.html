@@ -99,6 +99,30 @@
 
 let items = document.querySelectorAll(`.inbox input[type="checkbox"]`)
 
+items.forEach(x => x.addEventListener('click', finder))
+
+let lastChecked
+
+function finder(e) {
+let inBetween = false
+// if shift is held on click event, and the checkbox is checked, we can proceed
+if (this.checked && e.shiftKey){
+  items.forEach( checkbox => {
+    console.log("checkbox")
+    // check if checkboxed was clicked, this will point to the checkbox in the event listner
+    if (checkbox === this || checkbox === lastChecked) {
+      // inbetween is true for every iteration of the loop starting from the first check
+      inBetween = !inBetween
+      console.log('hi')
+    }
+    // when it is last check, we swap the true to false and the checkboxes are not clicked anymore
+    if (inBetween) {
+      checkbox.checked = true
+    }
+  })
+}
+console.log(this)
+}
 </script>
 </body>
 </html>
